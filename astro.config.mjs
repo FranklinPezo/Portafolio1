@@ -1,27 +1,13 @@
-// @ts-check
-import {defineConfig} from 'astro/config';
-import mdx from "@astrojs/mdx";
+import { defineConfig } from "astro/config";
+//import vercel from "@astrojs/vercel/serverless";
 
-import react from "@astrojs/react";
-
-import tailwind from "@astrojs/tailwind";
-
-import icon from "astro-icon";
-
-import sitemap from "@astrojs/sitemap";
-
-// https://astro.build/config
+// If you are not going to use vercel analytics you can delete the analytics
+// If you want to remove vercel from your project you can do npm uninstall vercel
 export default defineConfig({
-    site: 'https://simple-portfolio.vicbox.dev/',
-    integrations: [mdx(), react(), tailwind({
-        applyBaseStyles: false,
-    }), icon(), sitemap()],
-    markdown: {
-        shikiConfig: {
-            theme: 'plastic',
-            wrap: true,
-        },
-    },
-    experimental: {
-        svg: true,
-    }});
+  site: 'franklinpezo.github.io',
+  base: '/portafolio1',
+});
+
+//If you don't have vercel the configuration will be empty
+
+//ej : export default defineConfig({});
